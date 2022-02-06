@@ -23,13 +23,15 @@ public class OptionalTask1_3 {
     static void searchInArray(String[] array) {
         int sum = 0;
         int size = array.length;
-        for (int i= 0; i < array.length; i++) {
+        for (int i= 0; i < size; i++) {
             sum += array[i].length();
         }
         int middle = sum / size;
-        for (int i = 0; i < middle; i++) {
-            System.out.println("Элементы массива, длина которых меньше длины среднего значения длин всех элементов " + array[i]);
-            System.out.println("Их длина " + array[i].length());
+        for (int i = 0; i < size; i++) {
+            if (array[i].length() < middle){
+                System.out.println("Элементы массива, длина которых меньше длины среднего значения длин всех элементов " + array[i]);
+                System.out.println("Их длина " + array[i].length());
+            }    
         }
     }
 }
